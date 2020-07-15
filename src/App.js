@@ -42,7 +42,7 @@ render() {
         <h1>PET-A-FRIEND</h1>
         <form onSubmit={this.handleFormSubmission} noValidate>
           <div className='dogName'>
-            <label htmlFor="dogName">Dog Name</label>
+            <label htmlFor="dogName">Dog's Name</label>
             <input type="text" 
             className= ""
             placeholder="Your Friend's Name"
@@ -95,6 +95,9 @@ render() {
             noValidate
             onChange={this.handleChange}
             />
+          </div>
+          <div className="Register-div">
+              <button type="submit">Register Pet</button>
           </div>
         </form>
       </div>
