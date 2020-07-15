@@ -32,5 +32,32 @@ form {
     font-family: 'Indie Flower', cursive;
 
   }
+  input {
+    padding: 15px 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #cfcfcf;
+  }
+  
+  input::placeholder {
+    font-size: 1.2em;
+    color: rgb(153, 152, 152);
+  }
+  label {
+    font-size: 0.9em;
+    margin-bottom: 0.35em;
+    color: #222;
+    font-weight: lighter;
+  }
 
-   
+  .dogName,
+  .dogBreed,
+ .dogBirthday,
+ .dogGender{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+ 
+
+  

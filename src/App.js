@@ -2,7 +2,39 @@ import React, {Component} from 'react';
 import './App.css';
 
 class App extends React.Component {
- 
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      dogName: '',
+      dogGender: '',
+      dogBreed: '',
+      dogBirthday: '',
+      formCompleted: false
+    }
+  }
+  onNameChange = (event) => {
+    this.setState({
+      dogName: event.target.value
+    })
+  }
+  onBirthdayChange = (event) => {
+    this.setState({
+      dogBirthday: event.target.value
+    })
+  }
+    onBreedChange = (event) => {
+      this.setState({
+        dogBreed: event.target.value
+      })
+    }
+  handleFormSubmission = e => {
+    e.preventDefault();
+    this.setState({
+      formCompleted: true
+    })
+
+  }
 render() {
   return(
     <div className="web-container">
@@ -20,6 +52,28 @@ render() {
             onChange={this.handleChange}
             />
           </div>
+          <div className='dogGender'>
+            <label htmlFor="dogGender">Male</label>
+            <input type="radio" 
+            className= ""
+            placeholder="Your Friend's Gender"
+            value="male"
+            name="dogGender"
+            noValidate
+            onChange={this.handleChange}
+            />
+            </div>
+            <div className='dogGender'>
+            <label htmlFor="dogGender">Female</label>
+            <input type="radio" 
+            className= ""
+            placeholder="Your Friend's Gender"
+            value="female"
+            name="dogGender"
+            noValidate
+            onChange={this.handleChange}
+            />
+            </div>
           <div className='dogBreed'>
             <label htmlFor="dogBreed">Friend's Breed</label>
             <input type="text" 
